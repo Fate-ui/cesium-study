@@ -9,10 +9,14 @@ console.log(routeList.value)
 <template>
   <div>
     <ul>
-      <router-link v-for="route in routeList" :key="route.path" :to="route.path">{{ route.meta.title }}</router-link>
+      <router-link v-for="route in routeList" :key="route.path" :to="route.path" class="mx-3" active-class="active">{{ route.meta.title }}</router-link>
     </ul>
     <router-view />
   </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.active {
+  color: darkorange;
+}
+</style>

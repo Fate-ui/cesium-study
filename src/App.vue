@@ -1,4 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useCesiumStore } from '@/store/cesium'
+
+const cesiumStore = useCesiumStore()
+cesiumStore.init()
+</script>
 
 <template>
   <RouterView />

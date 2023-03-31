@@ -12,18 +12,28 @@ export type RouteRecordRawExt = RouteRecordRaw & { hidden?: boolean; children?: 
 export const constantRoutes: Array<RouteRecordRawExt> = [
   {
     path: '/',
-    redirect: '/home',
+    redirect: '/cesium',
     hidden: true
   },
   {
-    path: '/home',
-    redirect: '/home/index',
+    path: '/cesium',
+    // redirect: '/home/index',
     component: Layout,
     children: [
       {
-        path: 'index',
+        path: '/cesium/index',
         meta: { title: '飞机航线' },
-        component: () => import('@/views/Home.vue')
+        component: () => import('@/views/FlightTracker.vue')
+      },
+      {
+        path: '/cesium/building',
+        meta: { title: '3D建筑' },
+        component: () => import('@/views/VisualizeBuilding.vue')
+      },
+      {
+        path: '/cesium/entity',
+        meta: { title: 'entity学习' },
+        component: () => import('@/views/EntityStudy.vue')
       }
     ]
   }
