@@ -21,6 +21,8 @@ function initCesium() {
     }
   })
   viewer.zoomTo(wyoming)
+  wyoming.polygon.height = 200000
+  wyoming.polygon.extrudedHeight = 250000
   // viewer.flyTo(wyoming)
 }
 </script>

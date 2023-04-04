@@ -34,6 +34,16 @@ export const constantRoutes: Array<RouteRecordRawExt> = [
         path: '/cesium/entity',
         meta: { title: 'entity学习' },
         component: () => import('@/views/EntityStudy.vue')
+      },
+      {
+        path: '/cesium/imagery',
+        meta: { title: '可视化影像' },
+        component: () => import('@/views/VisualizingImagery.vue')
+      },
+      {
+        path: '/cesium/terrain',
+        meta: { title: '地形' },
+        component: () => import('@/views/Terrain.vue')
       }
     ]
   }
